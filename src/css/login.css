@@ -40,28 +40,37 @@ body {
     display: flex;
     animation: carouselAnimation 10s linear infinite; /* Adjust the duration as needed */
   }
-  
-  @keyframes carouselAnimation {
+
+
+@keyframes carouselAnimation {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-    25% {
-      transform: translateX(-100%);
+    16.66% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
     }
     50% {
-      transform: translateX(-200%);
+        transform: translateX(-100%);
     }
-    75% {
-      transform: translateX(-300%);
+    66.66% {
+        transform: translateX(-200%);
+    }
+    83.33% {
+        transform: translateX(-200%);
     }
     100% {
-      transform: translateX(0);
+        transform: translateX(-300%);
     }
-  }
+}
+
   
 
   .typed-text {
-    color: #5f6061;
+    color: #1a2e05;
+    margin-top: 2rem;
   }
   .box {
     padding: 1rem; /* equivalent to px-4 py-8 */
@@ -72,21 +81,41 @@ body {
     flex-direction: column; /* equivalent to flex-col */
     gap: 1rem; /* equivalent to gap-4 */
     border: 1px solid #e2e8f0; /* equivalent to border */
-    /* Add any additional styles here */
+    width: auto;
+    margin-bottom: 4rem;
   }
   
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #1a2e05;
+  }
+  
+ 
 
   .input-field {
     padding: 10px;
+    margin-top: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
+    width: calc(100% - 36px);
     box-sizing: border-box;
   }
   
+  .eye-button {
+    margin-left: 3px;
+    margin-top: 16px;
+  }
+
   .submit-button {
-    background-color: #007bff;
+    background-color: #1a2e05;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -95,5 +124,18 @@ body {
     font-size: 16px;
   }
 
- 
+  .submit-button:hover {
+    background-color: #5f6061; /* Change the hover color as needed */
+  }
   
+  .forgot-password {
+    color: #1a2e05; /* Change the color as needed */
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 8px; /* Adjust the margin as needed */
+  }
+  
+  .forgot-password:hover {
+    color: #5f6061; /* Change the hover color as needed */
+  }

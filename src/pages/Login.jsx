@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../css/login.css';
 import BG from '../assets/BgImage_Catherine.png';
-import BG_1 from '../assets/BgImage2_Catherine.png';
-import BG_2 from '../assets/BgImage2_Catherine.png';
-import BG_3 from '../assets/BgImage2_Catherine.png';
+import C1 from '../assets/Carousel/C1.png';
+import C2 from '../assets/Carousel/C2.png';
+import C3 from '../assets/Carousel/C3.png';
+import C4 from '../assets/Carousel/C4.png';
 import LOGO from '../assets/Logo_Catherine.png';
 
 import Typed from 'typed.js';
@@ -11,6 +12,7 @@ import Typed from 'typed.js';
 function Login() {
   const typedRef = useRef(null);
   const [currentImage, setCurrentImage] = useState(0);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     const options = {
@@ -41,8 +43,12 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const handleTogglePassword = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
 
-  const imageArray = [BG_1, BG_2, BG_3];
+
+  const imageArray = [C4, C1, C3,C4];
 
  
 
@@ -58,27 +64,43 @@ function Login() {
               <img key={index} src={image} alt={`Carousel Image ${index + 1}`} width={400} />
             ))}
           </div>
-        </div>
+      </div>
 
-        <form className='flex flex-col gap-5 p-3 ' onSubmit={handleSubmit}>
-          <input
-            type='text'
-            placeholder='Username'
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className='input-field'
-          />
-          <input
-            type='password'
-            placeholder='Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className='input-field'
-          />
-          <button type='submit' className='submit-button'>
+      <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className='input-field'
+              placeholder='Enter your username'
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password:</label>
+            <input
+              type={showPassword ? 'text' : 'password'}
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className='input-field'
+              placeholder='Enter your password'
+            />
+             <button type='button' className='eye-button' onClick={handleTogglePassword}>
+                {showPassword ? '👁️' : '👁️‍🗨️'}
+              </button>
+          </div>
+          <p className="forgot-password" >
+                Forgot Password?
+          </p>
+          <button type="submit" className='submit-button'>
             Log In
           </button>
         </form>
+
+        
       </div>
     </div>
   );
