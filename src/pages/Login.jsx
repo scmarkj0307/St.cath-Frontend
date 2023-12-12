@@ -8,6 +8,7 @@ import C4 from '../assets/Carousel/C4.png';
 import LOGO from '../assets/Logo_Catherine.png';
 
 import Typed from 'typed.js';
+import { NavLink } from 'react-router-dom';
 
 function Login() {
   const typedRef = useRef(null);
@@ -48,9 +49,9 @@ function Login() {
   };
 
 
-  const imageArray = [C4, C1, C3,C4];
+  const imageArray = [C4, C1, C3, C4];
 
- 
+
 
   return (
     <div className='cover'>
@@ -58,15 +59,15 @@ function Login() {
       <h1 className='font-bold text-4xl tracking-wide text-[#5f6061] typed-text'></h1>
 
       <div className='box'>
-      <div className='background_image2'>
+        <div className='background_image2'>
           <div className='image-carousel' style={{ transform: `translateX(-${currentImage * 100}%)` }}>
             {imageArray.map((image, index) => (
               <img key={index} src={image} alt={`Carousel Image ${index + 1}`} width={400} />
             ))}
           </div>
-      </div>
+        </div>
 
-      <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="username">Username:</label>
             <input
@@ -88,19 +89,17 @@ function Login() {
               className='input-field'
               placeholder='Enter your password'
             />
-             <button type='button' className='eye-button' onClick={handleTogglePassword}>
-                {showPassword ? '👁️' : '👁️‍🗨️'}
-              </button>
+            <button type='button' className='eye-button' onClick={handleTogglePassword}>
+              {showPassword ? '👁️' : '👁️‍🗨️'}
+            </button>
           </div>
           <p className="forgot-password" >
-                Forgot Password?
+            Forgot Password?
           </p>
-          <button type="submit" className='submit-button'>
-            Log In
-          </button>
+          <NavLink to="/dashboard" className='submit-button'>Login</NavLink>
         </form>
 
-        
+
       </div>
     </div>
   );
