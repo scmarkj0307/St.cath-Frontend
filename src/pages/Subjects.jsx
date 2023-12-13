@@ -4,13 +4,13 @@ import "../css/dashboard.scss";
 import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
 
-const Dashboard = () => {
+const Subjects = () => {
     return (
         <div className='home'>
             <Sidebar />
             <div className='homeContainer'>
                 <Header/>
-                Dashboard container
+                Subjects container
             </div>
         </div>
 
@@ -18,4 +18,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Subjects
