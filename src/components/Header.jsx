@@ -8,7 +8,7 @@ const Header = () => {
   useEffect(() => {
     // Initialize the Typed instance
     const typed = new Typed('.greetings', {
-      strings: ['Welcome, Surname First Name!!'],
+      strings: ['Welcome, Jenna Ortega!!'],
       typeSpeed: 50, // Typing speed in milliseconds
       showCursor: false, // Hide the cursor
     });
@@ -26,7 +26,7 @@ const Header = () => {
         <div className="user-info">
           <img src={jenna} alt="jenna" className="user-image" />
           <div className="user-details">
-            <p className="font-semibold">Nickname</p>
+            <p className="font-semibold">Jenna</p>
             <div className="user-stats">
               <div>
                 <RiVipDiamondLine size={25} className="icon-blue" />
