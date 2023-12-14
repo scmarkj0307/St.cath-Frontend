@@ -1,32 +1,47 @@
-import React from 'react'
-import jenna from "../assets/jenna.jpg";
-import { RiVipDiamondLine, RiCoinLine } from "react-icons/ri";
+import React, { useEffect } from 'react';
+import jenna from '../assets/jenna.jpg';
+import { RiVipDiamondLine, RiCoinLine } from 'react-icons/ri';
+import Typed from 'typed.js';
+import '../css/header.css';
 
 const Header = () => {
-    return (
-        <header className='fixed w-4/5 py-2 right-0 top-0 bg-emerald-400'>
-            <div className='flex flex-row justify-between items-center w-10/12 m-auto'>
-                <h1 className='text-2xl'>Welcome, <span className='font-semibold'>Jenna!</span></h1>
-                <div className='flex flex-row items-center gap-4'>
-                    <img src={jenna} alt="jenna" className='h-16 w-16 rounded-full' />
-                    <div>
-                        <p className='font-semibold'>Jenna</p>
-                        <div className='flex flex-row justify-between gap-4 items-center'>
-                            <div className='flex flex-row gap-1'>
-                                <RiVipDiamondLine size={25} className='text-blue-500' />
-                                <p>4</p>
-                            </div>
-                            <div className='flex flex-row gap-1'>
-                                <RiCoinLine size={25} className='text-yellow-300' />
-                                <p>4</p>
-                            </div>
+  useEffect(() => {
+    // Initialize the Typed instance
+    const typed = new Typed('.greetings', {
+      strings: ['Welcome, Surname First Name!!'],
+      typeSpeed: 50, // Typing speed in milliseconds
+      showCursor: false, // Hide the cursor
+    });
 
-                        </div>
-                    </div>
-                </div>
+    // Destroy the Typed instance on component unmount
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+  return (
+    <header className="header">
+      <div className="header-content">
+        <h1 className='greetings'></h1>
+        <div className="user-info">
+          <img src={jenna} alt="jenna" className="user-image" />
+          <div className="user-details">
+            <p className="font-semibold">Nickname</p>
+            <div className="user-stats">
+              <div>
+                <RiVipDiamondLine size={25} className="icon-blue" />
+                <p>4</p>
+              </div>
+              <div>
+                <RiCoinLine size={25} className="icon-yellow" />
+                <p>4</p>
+              </div>
             </div>
-        </header>
-    )
-}
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
