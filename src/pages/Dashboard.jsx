@@ -56,7 +56,7 @@ const Dashboard = () => {
                             textColor: 'white',
                         })}
                         />
-                        <div className="progressText">Math</div>
+                        <div className="progressText">Subject1</div>
                     </div>
                     <div className="progressItem">
                         <CircularProgressbar
@@ -70,7 +70,7 @@ const Dashboard = () => {
                             textColor: 'white',
                         })}
                         />
-                        <div className="progressText">English</div>
+                        <div className="progressText">Subject2</div>
                     </div>
                     <div className="progressItem">
                         <CircularProgressbar
@@ -84,7 +84,7 @@ const Dashboard = () => {
                             textColor: 'white',
                         })}
                         />
-                        <div className="progressText">Filipino</div>
+                        <div className="progressText">Subject3</div>
                     </div>
                     <div className="progressItem">
                         <CircularProgressbar
@@ -98,7 +98,7 @@ const Dashboard = () => {
                             textColor: 'white',
                         })}
                         />
-                        <div className="progressText">P.E</div>
+                        <div className="progressText">Subject4</div>
                     </div>
                     </div>
                     <div className='calendarNewsContainer'>

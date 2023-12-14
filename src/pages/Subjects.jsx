@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/dashboard.scss";
+import { useSpring, animated } from 'react-spring';
 
 import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
@@ -8,11 +9,20 @@ import subject1 from "../assets/subject1.jpg";
 import subject2 from "../assets/subject2.jpg";
 
 const Subjects = () => {
+
+    const fadeIn = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        config: { duration: 1000 }, // Adjust duration as needed
+      });
+
+
     return (
         <div className='home'>
             <Sidebar />
             <div className='homeContainer'>
                 <Header />
+                <animated.div style={fadeIn}>
                 <div className='p-10'>
                     <h1 className='text-2xl font-semibold mb-10'>Subjects</h1>
                     <div className='flex flex-row justify-between'>
@@ -64,6 +74,7 @@ const Subjects = () => {
                     </div>
 
                 </div>
+                </animated.div>
             </div>
         </div>
 

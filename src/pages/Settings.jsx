@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/dashboard.scss";
+import { useSpring, animated } from 'react-spring';
 
 import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
@@ -9,11 +10,19 @@ import profile from "../assets/jenna.jpg";
 import medal from "../assets/medal.png";
 
 const Settings = () => {
+
+    const fadeIn = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        config: { duration: 1000 }, // Adjust duration as needed
+      });
+
     return (
         <div className='home'>
             <Sidebar />
             <div className='homeContainer'>
                 <Header />
+                <animated.div style={fadeIn}>
                 <div className='w-9/12 m-auto p-6'>
                     <div className='flex flex-row items-center w-full justify-between'>
                         <div className='gap-4 flex flex-row items-center'>
@@ -54,6 +63,7 @@ const Settings = () => {
                         </div>
                     </div>
                 </div>
+            </animated.div>
             </div>
         </div>
 
