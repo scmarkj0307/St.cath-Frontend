@@ -10,7 +10,7 @@ const Subjects = () => {
             <Sidebar />
             <div className='homeContainer'>
                 <Header/>
-                Subjects container
+                <h1>TO BE EDIT BY HANS</h1>
             </div>
         </div>
 

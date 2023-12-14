@@ -11,7 +11,7 @@
   header {
     position: fixed;
     width: 100%; /* Equivalent to w-4/5 in Tailwind */
-    height: 10%;
+    height: 11%;
     padding-top: 1rem; /* Equivalent to py-2 in Tailwind */
     right: 0;
     top: 0;

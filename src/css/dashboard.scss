@@ -3,31 +3,110 @@
   
     .homeContainer {
       flex: 6;
-      margin-top: 4.5rem;
-      background-color: #fff1f2;
+      margin-top: 4rem;
+      background: linear-gradient(to right, #fff1f2, #ecfccb);
   
-      .widgets,
-      .charts {
+      .progressHeader{
+        margin-top: 10px;
+        margin-left: 50px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      
+      .progressText {
+        margin-top: 10px; /* Adjust the margin as needed */
+        margin-left: 12px;
+        font-size: 14px; /* Adjust the font size of the progress text */
+        color: white; /* Set the color of the progress text */
+        font-weight: bold;
+      }
+
+      .progressBox {
+        border: 2px solid #3498db; /* Border color for the box */
+        border-radius: 10px; /* Border radius for the box */
+        padding: 20px; /* Padding inside the box */
+        margin-top: 10px; /* Adjust the margin as needed */
+        margin-left: 5rem;
         display: flex;
-        padding: 20px;
-        gap: 20px;
+        justify-content: space-around; /* Distribute circular progress bars evenly in the box */
+        width: 80%;
+        background-color: #064e3b;
       }
-  
-      .charts {
-        padding: 5px 20px;
+    
+      .CircularProgressbar {
+        width: 80px; /* Set a fixed width for circular progress bars */
+        height: 80px; /* Set a fixed height for circular progress bars */
       }
-  
-      .listContainer {
-        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-        padding: 20px;
-        margin: 20px;
-  
-        .listTitle {
-          font-weight: 500;
-          color: gray;
-          margin-bottom: 15px;
+    
+      .CircularProgressbar-text {
+        font-si.progressBox {
+          display: flex;
+          gap: 20px; /* Adjust the gap between progress bars as needed */
+          margin-top: 30px; /* Adjust the margin as needed */
+          justify-content: space-around; /* Distribute circular progress bars evenly in the box */
+        }
+      
+        .progressItem {
+          text-align: center;
+        }
+        
+
+        .CircularProgressbar {
+          width: 80px; /* Set a fixed width for circular progress bars */
+          height: 80px; /* Set a fixed height for circular progress bars */
+        }
+      
+        .CircularProgressbar-text {
+          font-size: 16px; /* Adjust the font size of the percentage text */
+          fill: #3498db; /* Set the text color */
+        }
+      
+        .react-circular-progressbar {
+          &-path {
+            stroke: #3498db; /* Set the color of the progress bar */
+          }
         }
       }
+
+      .calendarNewsContainer {
+        display: flex;
+        flex-direction: row;
+        margin-left: 50px;
+        margin-top: 40px;
+      }
+    
+      .calendarContainer,
+      .newsContainer {
+        padding: 10px;
+        border: 2px solid #3498db;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        width: 30%;
+        margin-left: 80px;
+        height: auto;
+      }
+    
+      .calendarContainer {
+        margin-right: 20px;
+      }
+    
+      .calendarLabel {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    
+      .newsContainer h2 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    
+      .newsContent {
+        /* Add styles for the news content as needed */
+      }
+
     }
+
   }

@@ -20,28 +20,28 @@ export const Sidebar = () => {
                 <Link to="/dashboard" style={{textDecoration:"none"}}>
                 <li>
                     <DashboardCustomizeIcon/>
-                    <span>Dashboard</span>
+                    <span className='title'>Dashboard</span>
                 </li>
                 </Link>
 
                 <Link to="/subjects" style={{textDecoration:"none"}}>
                 <li>
                     <LibraryBooksOutlinedIcon/>
-                    <span>Subjects</span>
+                    <span className='title'>Subjects</span>
                 </li>
                 </Link>
 
                 <Link to="/messages" style={{textDecoration:"none"}}>
                 <li>
                     <SendIcon/>
-                    <span>Messages</span>
+                    <span className='title'>Messages</span>
                 </li>
                 </Link>
 
                 <Link to="/settings" style={{textDecoration:"none"}}>
                 <li>
                     <SettingsIcon/>
-                    <span>Settings</span>
+                    <span className='title'> Settings</span>
                 </li>
                 </Link>
             </ul>
@@ -54,7 +54,7 @@ export const Sidebar = () => {
             <Link to="/" style={{textDecoration:"none"}}>
                 <li>
                     <LogoutIcon/>
-                    <span>Logout</span>
+                    <span className='title'>Logout</span>
                 </li>
             </Link>
             </ul>

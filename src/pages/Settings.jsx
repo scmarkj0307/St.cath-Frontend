@@ -10,7 +10,7 @@ const Settings = () => {
             <Sidebar />
             <div className='homeContainer'>
                 <Header/>
-                Settings container
+                <h1>TO BE EDIT BY HANS</h1>
             </div>
         </div>
 
