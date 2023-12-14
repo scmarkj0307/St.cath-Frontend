@@ -34,6 +34,24 @@ const Subjects = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className=''>
+                            <div className='border border-slate-400 w-96 flex flex-row mb-6'>
+                                <img src={subject1} className=' w-28' />
+                                <div className='flex flex-col gap-2 p-4'>
+                                    <h2 className='text-xl font-semibold'>Math</h2>
+                                    <p>Lesson 1: Natural Numbers</p>
+                                    <p>Lesson 2: Number Sequence</p>
+                                </div>
+                            </div>
+                            <div className='border border-slate-400 w-96 flex flex-row'>
+                                <img src={subject2} className=' w-28' />
+                                <div className='flex flex-col gap-2 p-4'>
+                                    <h2 className='text-xl font-semibold'>English</h2>
+                                    <p>Lesson 1: Figure of speech</p>
+                                    <p>Lesson 2: Verbal Writing</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <div className='border border-slate-400 w-40 flex flex-col p-4'>
                             <h1 className='text-xl font-semibold mb-4'>To-do!</h1>
