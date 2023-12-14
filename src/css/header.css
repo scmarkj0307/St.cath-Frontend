@@ -2,92 +2,107 @@
 
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Header Styles */
-  header {
-    position: fixed;
-    width: 100%; /* Equivalent to w-4/5 in Tailwind */
-    height: 11%;
-    padding-top: 1rem; /* Equivalent to py-2 in Tailwind */
-    right: 0;
-    top: 0;
-    background-color: #1a2e05; /* Equivalent to bg-white in Tailwind */
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  width: 100%;
+  height: 11%;
+  padding-top: 1rem;
+  right: 0;
+  top: 0;
+  background-color: #1a2e05;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.header-content h1 {
+  font-size: 1.5rem;
+}
+
+.header-content h1 span {
+  font-weight: 600;
+}
+
+.greetings {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-image {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.user-details {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.user-details p {
+  font-weight: 600;
+}
+
+.user-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user-stats div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+.user-stats p {
+  margin: 0;
+}
+
+/* Icons Styles (assuming you're using a library like react-icons) */
+.icon-blue {
+  color: #0070f3;
+}
+
+.icon-yellow {
+  color: #f6e05e;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .header-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%; /* Equivalent to w-10/12 in Tailwind */
-    margin: auto;
-  }
-  
-  .header-content h1 {
-    font-size: 1.5rem; /* Equivalent to text-2xl in Tailwind */
-  }
-  
-  .header-content h1 span {
-    font-weight: 600; /* Equivalent to font-semibold in Tailwind */
-  }
-  
-  .greetings {
-    color: white;
-    margin-bottom: 1rem;
+    width: 90%;
   }
 
-  .user-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem; /* Equivalent to gap-4 in Tailwind */
-  }
-  
-  .user-image {
-    height: 3rem; /* Equivalent to h-16 in Tailwind */
-    width: 3rem; /* Equivalent to w-16 in Tailwind */
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
-  
-  .user-details {
-    margin-left: 1rem; /* Adjust as needed */
-    margin-bottom: 1rem;
-    color: white;
-  }
-  
-  .user-details p {
-    font-weight: 600; /* Equivalent to font-semibold in Tailwind */
-  }
-  
   .user-stats {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem; /* Equivalent to gap-4 in Tailwind */
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
   .user-stats div {
-    display: flex;
-    flex-direction: row;
-    gap: 0.25rem; /* Adjust as needed */
+    margin-bottom: 0.5rem;
   }
-  
-  .user-stats p {
-    margin: 0;
-  }
-  
-  /* Icons Styles (assuming you're using a library like react-icons) */
-  .icon-blue {
-    color: #0070f3; /* Equivalent to text-blue-500 in Tailwind */
-  }
-  
-  .icon-yellow {
-    color: #f6e05e; /* Equivalent to text-yellow-300 in Tailwind */
-  }
-  
+}

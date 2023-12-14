@@ -1,5 +1,6 @@
 import React from 'react';
 import "../css/dashboard.scss";
+import { useSpring, animated } from 'react-spring';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css'; // Import the styles
 import Calendar from 'react-calendar'; // Import the calendar component
@@ -9,13 +10,40 @@ import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 
 const Dashboard = () => {
+
+    const fadeIn = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        config: { duration: 1000 }, // Adjust duration as needed
+      });
+
+    const slideIn = useSpring({
+        transform: 'translateX(0%)',
+        from: { transform: 'translateX(-100%)' },
+      });
+
+  
+
+    const rotate = useSpring({
+        transform: 'rotate(360deg)',
+        from: { transform: 'rotate(0deg)' },
+      });
+
+    
+      
+      
+      
+      
+
+
     return (
         <div className='home'>
             <Sidebar />
             <div className='homeContainer'>
                 <Header/>
-                <div><h1 className='progressHeader'>Summary Report</h1></div>
-                <div className="progressBox">
+                <animated.div style={slideIn}>
+                    <div><h1 className='progressHeader'>Summary Report</h1></div>
+                    <div className="progressBox">
                     <div className="progressItem">
                         <CircularProgressbar
                         value={25}
@@ -87,7 +115,7 @@ const Dashboard = () => {
                             </div>
                             </div>
                     </div>
-                    
+                </animated.div>
                 </div>
                 </div>
   );

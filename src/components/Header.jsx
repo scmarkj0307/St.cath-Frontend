@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import jenna from '../assets/jenna.jpg';
 import { RiVipDiamondLine, RiCoinLine } from 'react-icons/ri';
+import Typed from 'typed.js';
 import '../css/header.css';
 
 const Header = () => {
+  useEffect(() => {
+    // Initialize the Typed instance
+    const typed = new Typed('.greetings', {
+      strings: ['Welcome, Surname First Name!!'],
+      typeSpeed: 50, // Typing speed in milliseconds
+      showCursor: false, // Hide the cursor
+    });
+
+    // Destroy the Typed instance on component unmount
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <header className="header">
       <div className="header-content">
-        <h1 className='greetings'>
-          Welcome, <span className="font-semibold">Surname, First Name!</span>
-        </h1>
+        <h1 className='greetings'></h1>
         <div className="user-info">
           <img src={jenna} alt="jenna" className="user-image" />
           <div className="user-details">

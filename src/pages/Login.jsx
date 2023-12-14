@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/login.css';
 import BG from '../assets/BgImage_Catherine.png';
 import C1 from '../assets/Carousel/C1.png';
@@ -11,6 +12,7 @@ import Typed from 'typed.js';
 import { NavLink } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
   const typedRef = useRef(null);
   const [currentImage, setCurrentImage] = useState(0);
   const [showPassword, setShowPassword] = useState(false);
@@ -38,9 +40,18 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // You can access the username and password values using state variables
+  
+    // Validation logic
+    if (username === 'admin' && password === '123') {
+      // Redirect to the dashboard or perform any other action
+      alert('Successfully logged in!');
+      navigate('/dashboard');
+    } else {
+      // Display an error message or perform other actions for invalid credentials
+      alert('Invalid credentials. Please try again.');
+    }
   };
+  
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -67,7 +78,7 @@ function Login() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit}>
+        <form >
           <div>
             <label htmlFor="username">Username:</label>
             <input
@@ -96,7 +107,7 @@ function Login() {
           <p className="forgot-password" >
             Forgot Password?
           </p>
-          <NavLink to="/dashboard" className='submit-button'>Login</NavLink>
+          <button onClick={handleSubmit} className='btn'>Login</button>
         </form>
 
 

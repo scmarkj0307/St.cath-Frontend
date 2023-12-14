@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 body {
     margin: 0;
     padding: 0;
@@ -115,7 +112,7 @@ body {
     margin-top: 16px;
   }
 
-  .submit-button {
+  .btn {
     background-color: #1a2e05;
     color: white;
     padding: 10px 15px;
@@ -126,7 +123,8 @@ body {
     text-align: center;
   }
 
-  .submit-button:hover {
+
+  .btn:hover {
     background-color: #5f6061; /* Change the hover color as needed */
   }
   
